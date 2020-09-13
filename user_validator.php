@@ -15,7 +15,7 @@ class UserValidator{
   private $errors = [];
 
   // Input fields data
-  private static $field = ['username', 'email'];
+  private static $fields = ['username', 'email'];
 
   public function __construct($post_data){
     $this->data = $post_data;
@@ -44,8 +44,8 @@ class UserValidator{
       $this->addError('username','username cannot be empty');
     } else {
       // Adding the Regular Expression that $val should match to pass
-      if(!preg_match('/*[a-zA-Z0-9]{6,12}$/', $val)){
-        $this->addError('username' . 'username must be 6-12 chars and aphanumeric');
+      if(!preg_match('/^[a-zA-Z0-9]{6,12}$/', $val)){
+        $this->addError('username' , 'username must be 6-12 chars and aphanumeric');
       }
     }
   }
@@ -57,7 +57,7 @@ class UserValidator{
     } else {
       // Checking the email format
       if(!filter_var($val, FILTER_VALIDATE_EMAIL)){
-        $this->addError('email' . 'Please checkout the email format');
+        $this->addError('email' , 'Please checkout the email format');
       }
     }
   }
