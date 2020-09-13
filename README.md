@@ -1,5 +1,5 @@
-##Form-PHP-OOP-mySQL-VanillaCSS
+**Form-PHP-OOP-mySQL-VanillaCSS**
 
-Webapp that represents a login page written in OOP PHP that checks and manipulates mySQL DB.
+_Webapp that represents a login page written in OOP PHP that checks and manipulates mySQL DB._
 
-For styling, I am using Vanilla CSS.
+_For styling, I am using Vanilla CSS._
